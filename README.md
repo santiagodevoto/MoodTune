@@ -1,12 +1,12 @@
 # MoodTune
 Creado por Santiago Devoto, Ramon Otero Monegur, Mia Blaquier, Alfonso Bujan y Wenceslao Grosse Garros. 
 
-# Objetivo y descripción general
+## Objetivo y descripción general
 MoodTune es un sistema de recomendación musical que registra el estado emocional diario del usuario mediante un cuestionario sencillo y le sugiere una canción acorde. Combina el registro personal de emociones con recomendación automática para brindar una experiencia personalizada y cotidiana.
 
 El sistema trabaja exclusivamente con el estado emocional **autopercibido y reportado** por el usuario. No realiza diagnósticos ni evaluaciones clínicas de ningún tipo.
 
-# Principales funcionalidades
+## Principales funcionalidades
 - Registro de perfil con preferencias musicales
 - Cuestionario diario de estado de ánimo (respuestas del 1 al 10)
 - Clasificación automática en 5 categorías emocionales
@@ -14,16 +14,16 @@ El sistema trabaja exclusivamente con el estado emocional **autopercibido y repo
 - Historial personal con fecha, puntaje y canción recomendada
 - Gráficos de evolución emocional a lo largo del tiempo
 
-# Fuente de datos 
+## Fuente de datos 
 La base de canciones se encuentra en un archivo `data_moods.csv` que se encuentra dentro de un proyecto de Github que contiene la clasificacion de diversas canciones mostrando su titulo, artista, album, estado emocional, entre varias otras categorias. 
 
-# Librerias utilizadas
+## Librerias utilizadas
 - pandas: Almacenar y leer registros diarios.
 - matplotlib: Generar graficos
 - datetime: Registrar fecha de cada entrada diaria
 - random: Seleccion aleatoria entre canciones del mismo mood
   
-# Funciones principales
+## Funciones principales
 
 ### `preguntar_preferencias(usuario)`
 Muestra los géneros musicales disponibles y le pide al usuario que elija sus favoritos. Valida que haya seleccionado al menos uno (reintenta si no) y guarda las preferencias en `usuarios.csv`. Retorna las preferencias para usarlas en la recomendación.
@@ -54,12 +54,12 @@ Lee el historial del usuario. Si no hay registros, avisa y termina. Si hay datos
 - Distribución de categorías emocionales
 - Géneros musicales más recomendados
 
-# Resultados y salidas del programa
+## Resultados y salidas del programa
 Al usar el sistema, el usuario obtiene:
 
 - **Recomendación musical**: nombre de la canción, artista y género, seleccionada automáticamente según su estado del día y sus preferencias.
 - **Historial**: tabla con fecha, puntaje emocional y canción recomendada de cada día registrado.
 - **Gráficos**: tres visualizaciones generadas con `matplotlib` que muestran la evolución emocional a lo largo del tiempo, la distribución de sus estados y sus géneros más escuchados.
 
-# Declaracion de IA
+## Declaracion de IA
 Durante el desarrollo de este proyecto se utilizaron herramientas de inteligencia artificial (como ChatGPT o Claude) como una herramienta de asistencia y no reemplazó el proceso de aprendizaje ni la autoría del trabajo.
