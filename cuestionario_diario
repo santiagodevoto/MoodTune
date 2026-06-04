@@ -1,0 +1,37 @@
+def cuestionario_diario():
+    preguntas = [
+        "¿Cómo estuvo tu estado de ánimo hoy?",
+        "¿Qué tan motivado te sentiste hoy?",
+        "¿Qué tan bien descansaste anoche?",
+        "¿Qué tan productivo fue tu día?"
+    ]
+
+    # Pesos de cada pregunta
+    pesos = [0.4, 0.3, 0.2, 0.1]
+
+    respuestas = []
+
+    for pregunta in preguntas:
+        while True:
+            try:
+                respuesta = int(input(f"{pregunta} (1-10): "))
+
+                if 1 <= respuesta <= 10:
+                    respuestas.append(respuesta)
+                    break
+                else:
+                    print("Error: ingrese un número entre 1 y 10.")
+
+            except ValueError:
+                print("Error: debe ingresar un número entero.")
+
+    puntaje = 0
+    for respuesta, peso in zip(respuestas, pesos):
+        puntaje += respuesta * peso
+
+    return puntaje
+
+
+# Programa principal
+resultado = cuestionario_diario()
+print(f"\nPuntaje diario: {resultado:.2f}")
