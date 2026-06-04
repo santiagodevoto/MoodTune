@@ -1,0 +1,183 @@
+name,album,artist,release_date,popularity,danceability,energy,valence,tempo,genre,mood
+Blinding Lights,After Hours,The Weeknd,2019-11-29,95,0.514,0.73,0.334,171.005,Pop,Energetic
+Can't Stop the Feeling,Trolls Soundtrack,Justin Timberlake,2016-05-06,84,0.736,0.794,0.956,113.462,Pop,Happy
+Happy,Girl,Pharrell Williams,2013-11-22,85,0.826,0.841,0.962,160.018,Pop,Happy
+Shake It Off,1989,Taylor Swift,2014-08-18,86,0.646,0.793,0.938,160.078,Pop,Happy
+Uptown Funk,Uptown Special,Mark Ronson ft. Bruno Mars,2014-11-10,90,0.896,0.711,0.953,115.042,Pop,Happy
+Levitating,Future Nostalgia,Dua Lipa,2020-10-01,87,0.702,0.826,0.915,103.016,Pop,Happy
+As It Was,Harry's House,Harry Styles,2022-04-01,95,0.52,0.731,0.662,174.018,Pop,Happy
+Flowers,Endless Summer Vacation,Miley Cyrus,2023-01-13,89,0.676,0.712,0.87,118.044,Pop,Happy
+Anti-Hero,Midnights,Taylor Swift,2022-10-21,98,0.637,0.507,0.563,97.008,Pop,Calm
+Someone Like You,21,Adele,2011-01-24,85,0.225,0.248,0.07,67.504,Pop,Sad
+All of Me,Love in the Future,John Legend,2013-08-12,85,0.42,0.195,0.352,120.077,Pop,Sad
+Let Her Go,All the Little Lights,Passenger,2012-07-24,80,0.436,0.358,0.329,75.013,Pop,Sad
+Roxanne,Skins,Arizona Zervas,2019-10-04,83,0.732,0.611,0.478,124.057,Pop,Calm
+Unstoppable,Alesso,Sia,2015-08-28,78,0.612,0.824,0.637,128.031,Pop,Energetic
+Run the World (Girls),4,Beyoncé,2011-04-22,79,0.742,0.781,0.663,128.034,Pop,Energetic
+Thunderstruck,The Razors Edge,AC/DC,1990-09-10,82,0.358,0.979,0.446,133.044,Rock,Energetic
+Enter Sandman,Metallica,Metallica,1991-08-12,83,0.404,0.972,0.275,123.219,Rock,Energetic
+Back in Black,Back in Black,AC/DC,1980-07-25,84,0.502,0.898,0.43,92.06,Rock,Energetic
+Bohemian Rhapsody,A Night at the Opera,Queen,1975-10-31,87,0.394,0.562,0.212,71.129,Rock,Sad
+Hotel California,Hotel California,Eagles,1977-02-22,84,0.572,0.619,0.496,74.068,Rock,Calm
+Smells Like Teen Spirit,Nevermind,Nirvana,1991-09-10,85,0.501,0.909,0.369,116.761,Rock,Energetic
+Nothing Else Matters,Metallica,Metallica,1991-08-12,80,0.343,0.445,0.234,69.098,Rock,Sad
+Wish You Were Here,Wish You Were Here,Pink Floyd,1975-09-12,82,0.326,0.343,0.356,66.266,Rock,Sad
+Under the Bridge,Blood Sugar Sex Magik,Red Hot Chili Peppers,1992-09-29,81,0.473,0.479,0.271,79.151,Rock,Sad
+Don't Stop Believin,Escape,Journey,1981-07-17,83,0.522,0.804,0.766,118.991,Rock,Happy
+Seven Nation Army,Elephant,The White Stripes,2003-04-01,83,0.502,0.637,0.427,123.764,Rock,Energetic
+Yellow,Parachutes,Coldplay,2000-07-10,82,0.508,0.591,0.547,88.747,Rock,Calm
+Fix You,X&Y,Coldplay,2005-09-05,84,0.327,0.237,0.228,69,Rock,Sad
+In My Life,Rubber Soul,The Beatles,1965-12-03,79,0.541,0.366,0.731,102.278,Rock,Calm
+God's Plan,Scorpion,Drake,2018-01-19,90,0.754,0.449,0.357,77.169,Hip-Hop,Calm
+HUMBLE.,DAMN.,Kendrick Lamar,2017-04-14,88,0.904,0.627,0.421,150.027,Hip-Hop,Energetic
+Sicko Mode,Astroworld,Travis Scott,2018-08-03,89,0.836,0.73,0.446,155.008,Hip-Hop,Energetic
+Hotline Bling,Views,Drake,2015-10-18,85,0.711,0.401,0.27,135.017,Hip-Hop,Calm
+Lucid Dreams,Goodbye & Good Riddance,Juice WRLD,2018-05-23,88,0.512,0.562,0.218,83.989,Hip-Hop,Sad
+Rockstar,Beerbongs & Bentleys,Post Malone,2017-09-15,87,0.626,0.567,0.129,159,Hip-Hop,Sad
+Sunflower,Spider-Man: Into the Spider-Verse,Post Malone,2018-10-18,90,0.763,0.479,0.91,90.022,Hip-Hop,Happy
+The Box,Please Excuse Me for Being Antisocial,Roddy Ricch,2019-12-06,88,0.896,0.624,0.344,116.962,Hip-Hop,Energetic
+Numb,Meteora,Linkin Park,2003-03-25,84,0.619,0.851,0.178,174.982,Hip-Hop,Sad
+Lose Yourself,8 Mile Soundtrack,Eminem,2002-10-28,85,0.821,0.619,0.396,171,Hip-Hop,Energetic
+Without Me,Recovery,Eminem,2002-05-14,82,0.802,0.831,0.568,95.036,Hip-Hop,Energetic
+Blueberry Faygo,Shooters Inside My Crib,Lil Mosey,2019-11-22,82,0.851,0.632,0.68,100.055,Hip-Hop,Happy
+Watermelon Sugar,Fine Line,Harry Styles,2019-11-22,88,0.548,0.816,0.557,95.386,Pop,Happy
+Save Your Tears,After Hours,The Weeknd,2020-03-20,87,0.631,0.774,0.649,118.053,Pop,Happy
+Peaches,Justice,Justin Bieber,2021-03-19,86,0.671,0.695,0.667,90.03,Pop,Happy
+Stay,Stay,Kid LAROI & Justin Bieber,2021-07-09,93,0.591,0.763,0.551,169.928,Pop,Energetic
+Good 4 U,SOUR,Olivia Rodrigo,2021-05-14,91,0.563,0.873,0.654,166.928,Pop,Energetic
+drivers license,SOUR,Olivia Rodrigo,2021-01-08,89,0.339,0.359,0.133,143.874,Pop,Sad
+Montero,Montero,Lil Nas X,2021-03-26,88,0.698,0.782,0.679,179.977,Pop,Energetic
+Levitating (feat. DaBaby),Future Nostalgia,Dua Lipa,2020-10-01,84,0.702,0.826,0.915,103.016,Pop,Happy
+Heat Waves,Dreamland,Glass Animals,2020-06-29,92,0.508,0.673,0.478,80.042,Indie,Calm
+Mr. Brightside,Hot Fuss,The Killers,2003-09-29,88,0.342,0.938,0.29,148.11,Indie,Energetic
+Take Me Out,Franz Ferdinand,Franz Ferdinand,2004-01-26,79,0.562,0.888,0.436,104.03,Indie,Energetic
+Do I Wanna Know?,AM,Arctic Monkeys,2013-06-19,85,0.546,0.519,0.241,85.012,Indie,Calm
+R U Mine?,AM,Arctic Monkeys,2013-09-09,82,0.517,0.815,0.363,101.009,Indie,Energetic
+505,Favourite Worst Nightmare,Arctic Monkeys,2007-04-23,80,0.378,0.48,0.204,73.005,Indie,Sad
+Skinny Love,For Emma Forever Ago,Bon Iver,2007-07-01,78,0.401,0.256,0.276,142.038,Indie,Sad
+Holocene,Bon Iver,Bon Iver,2011-06-17,77,0.39,0.214,0.373,143.989,Indie,Sad
+Electric Feel,Oracular Spectacular,MGMT,2008-01-01,80,0.748,0.68,0.812,107,Indie,Happy
+Time to Pretend,Oracular Spectacular,MGMT,2008-01-01,75,0.476,0.845,0.618,132.029,Indie,Energetic
+Somebody That I Used to Know,Making Mirrors,Gotye,2011-08-01,82,0.6,0.562,0.169,129.006,Indie,Sad
+Budapest,Shifting Skins,George Ezra,2014-06-09,80,0.619,0.503,0.758,131.99,Indie,Happy
+Midnight City,Hurry Up We're Dreaming,M83,2011-10-18,80,0.565,0.839,0.542,103.987,Indie,Energetic
+The Less I Know the Better,Currents,Tame Impala,2015-07-17,84,0.64,0.727,0.744,115.994,Indie,Happy
+Let It Happen,Currents,Tame Impala,2015-07-17,79,0.474,0.769,0.548,116.993,Indie,Energetic
+Feels Like We Only Go Backwards,Lonerism,Tame Impala,2012-10-05,77,0.565,0.58,0.651,95.953,Indie,Calm
+One Dance,Views,Drake,2016-04-05,87,0.793,0.625,0.682,103.968,R&B,Happy
+Earned It,Fifty Shades of Grey,The Weeknd,2015-01-12,84,0.529,0.5,0.296,69.007,R&B,Calm
+Often,Beauty Behind the Madness,The Weeknd,2015-08-28,80,0.665,0.54,0.384,93.99,R&B,Calm
+Passionfruit,More Life,Drake,2017-03-18,83,0.745,0.537,0.67,93.017,R&B,Calm
+Location,Loc,Khalid,2016-09-09,81,0.714,0.52,0.633,107.985,R&B,Calm
+Young Dumb & Broke,American Teen,Khalid,2017-03-03,83,0.619,0.529,0.719,100.009,R&B,Happy
+Better,Free Spirit,Khalid,2019-04-05,80,0.504,0.614,0.466,97.994,R&B,Calm
+Talk,Free Spirit,Khalid,2019-04-05,78,0.838,0.65,0.752,98.026,R&B,Happy
+Essence,Made in Lagos,Wizkid,2020-10-30,85,0.761,0.643,0.801,109.003,R&B,Happy
+Leave the Door Open,An Evening with Silk Sonic,Bruno Mars,2021-03-05,88,0.615,0.512,0.737,94.984,R&B,Happy
+Smokin Out the Window,An Evening with Silk Sonic,Bruno Mars,2021-11-05,83,0.706,0.717,0.77,117.983,R&B,Happy
+Put It in a Love Song,I Am... Sasha Fierce,Alicia Keys,2009-11-10,74,0.648,0.6,0.71,105.001,R&B,Happy
+No One,As I Am,Alicia Keys,2007-11-13,80,0.498,0.467,0.581,79.008,R&B,Calm
+Fallin',Songs in A Minor,Alicia Keys,2001-06-05,78,0.417,0.33,0.344,70.022,R&B,Sad
+If You Had My Love,Jennifer Lopez,Jennifer Lopez,1999-06-01,75,0.764,0.68,0.81,116,R&B,Happy
+Thinking Out Loud,X,Ed Sheeran,2014-09-12,86,0.535,0.499,0.602,79,R&B,Calm
+Breathin,Sweetener,Ariana Grande,2018-08-17,82,0.63,0.811,0.606,140.952,Pop,Calm
+7 Rings,Thank U Next,Ariana Grande,2019-01-18,88,0.328,0.66,0.379,140.046,Pop,Energetic
+Thank U Next,Thank U Next,Ariana Grande,2018-11-03,89,0.607,0.652,0.441,106.978,Pop,Calm
+Problem,My Everything,Ariana Grande,2014-05-05,82,0.785,0.741,0.742,135.963,Pop,Energetic
+One Last Time,My Everything,Ariana Grande,2014-08-25,80,0.547,0.695,0.563,132.044,Pop,Sad
+Shape of You,Divide,Ed Sheeran,2017-01-06,92,0.825,0.652,0.931,95.977,Pop,Happy
+Perfect,Divide,Ed Sheeran,2017-03-03,88,0.428,0.43,0.574,95.053,Pop,Calm
+Photograph,X,Ed Sheeran,2014-05-09,84,0.56,0.498,0.575,108.05,Pop,Calm
+Galway Girl,Divide,Ed Sheeran,2017-03-03,81,0.726,0.868,0.898,99.938,Pop,Happy
+Castle on the Hill,Divide,Ed Sheeran,2017-01-06,82,0.442,0.82,0.558,135.008,Pop,Energetic
+Lean On,Peace Is the Mission,Major Lazer,2015-03-02,84,0.712,0.763,0.778,97.992,Electronic,Happy
+Titanium,Nothing but the Beat,David Guetta,2011-08-29,83,0.613,0.783,0.394,126.01,Electronic,Energetic
+Animals,Nothing but the Beat,Martin Garrix,2013-10-28,82,0.612,0.965,0.331,128.006,Electronic,Energetic
+Strobe,For Lack of a Better Name,deadmau5,2009-11-23,76,0.455,0.547,0.228,128,Electronic,Calm
+Midnight,New Eyes,Coldplay x Avicii,2012-01-01,74,0.48,0.306,0.48,88.043,Electronic,Calm
+Wake Me Up,TRUE,Avicii,2013-06-17,85,0.7,0.799,0.531,124.008,Electronic,Energetic
+Levels,Levels,Avicii,2011-10-28,83,0.627,0.66,0.631,126,Electronic,Happy
+Without You,TRUE,Avicii,2013-01-01,79,0.495,0.563,0.348,134.028,Electronic,Sad
+SOS,SOS,Rihanna,2006-01-23,78,0.757,0.814,0.944,120.01,Electronic,Happy
+We Found Love,Talk That Talk,Rihanna,2011-09-22,83,0.619,0.892,0.52,128.016,Electronic,Energetic
+Clarity,Clarity,Zedd,2012-10-08,81,0.658,0.894,0.473,128.019,Electronic,Energetic
+Beautiful Now,Beautiful Now,Zedd,2015-06-05,79,0.61,0.823,0.436,128.02,Electronic,Energetic
+Stay the Night,Nothing but the Beat,Zedd,2014-09-26,78,0.632,0.866,0.49,128.015,Electronic,Energetic
+Faded,Faded,Alan Walker,2015-12-03,86,0.478,0.638,0.328,89.997,Electronic,Sad
+Alone,Different World,Alan Walker,2016-12-14,82,0.508,0.702,0.428,101.991,Electronic,Calm
+On My Way,Different World,Alan Walker,2019-02-13,79,0.51,0.621,0.507,98.004,Electronic,Calm
+Despacito,Vida,Luis Fonsi,2017-01-13,91,0.694,0.815,0.813,88.931,Latin,Happy
+Con Calma,Con Calma,Daddy Yankee,2019-01-25,86,0.784,0.762,0.843,95.017,Latin,Happy
+Gasolina,Barrio Fino,Daddy Yankee,2004-04-01,82,0.785,0.903,0.86,100.005,Latin,Energetic
+Bailando,Bailando,Enrique Iglesias,2014-04-07,83,0.773,0.741,0.919,95.028,Latin,Happy
+Waka Waka,Laundry Service,Shakira,2010-05-07,83,0.799,0.862,0.93,130.01,Latin,Happy
+Hips Don't Lie,Oral Fixation Vol 2,Shakira,2005-11-28,82,0.769,0.793,0.808,100.044,Latin,Happy
+Lean On,Lean On,J Balvin,2015-03-02,80,0.81,0.75,0.773,99,Latin,Happy
+Mi Gente,Vibras,J Balvin,2017-06-30,86,0.835,0.766,0.81,103.972,Latin,Happy
+X (EQUIS),X,Nicky Jam x J Balvin,2018-06-29,84,0.787,0.782,0.883,95,Latin,Happy
+Taki Taki,Taki Taki,DJ Snake,2018-10-05,83,0.844,0.791,0.78,98.987,Latin,Happy
+MIA,Vibras,Bad Bunny,2018-01-01,82,0.825,0.644,0.744,92.036,Latin,Happy
+Dakiti,El Último Tour Del Mundo,Bad Bunny,2020-10-29,90,0.87,0.714,0.806,97.97,Latin,Happy
+Hawái,YHLQMDLG,Maluma,2020-08-07,87,0.771,0.684,0.82,95.026,Latin,Happy
+Unkiss Me,Unbroken,Maroon 5,2012-06-26,74,0.48,0.581,0.454,130,Latin,Calm
+La Bicicleta,Más,Carlos Vives,2016-04-22,78,0.762,0.815,0.894,115.996,Latin,Happy
+Blue (Da Ba Dee),...Play,Eiffel 65,1998-10-01,80,0.606,0.889,0.67,136.009,Electronic,Happy
+Stronger,Graduation,Kanye West,2007-09-11,84,0.514,0.774,0.498,104.01,Hip-Hop,Energetic
+Gold Digger,Late Registration,Kanye West,2005-08-30,82,0.843,0.741,0.674,112.998,Hip-Hop,Energetic
+All Falls Down,The College Dropout,Kanye West,2004-02-10,77,0.796,0.611,0.576,84.984,Hip-Hop,Calm
+Flashing Lights,Graduation,Kanye West,2007-09-11,76,0.589,0.624,0.224,116.999,Hip-Hop,Sad
+Runaway,My Beautiful Dark Twisted Fantasy,Kanye West,2010-11-22,78,0.458,0.477,0.14,168.997,Hip-Hop,Sad
+Good Morning,Graduation,Kanye West,2007-09-11,75,0.709,0.643,0.655,96.001,Hip-Hop,Happy
+DNA.,DAMN.,Kendrick Lamar,2017-04-14,84,0.651,0.803,0.412,141.028,Hip-Hop,Energetic
+Alright,To Pimp a Butterfly,Kendrick Lamar,2015-06-23,79,0.693,0.683,0.711,100.025,Hip-Hop,Happy
+Swimming Pools,good kid m.A.A.d city,Kendrick Lamar,2012-10-22,80,0.847,0.618,0.327,78.016,Hip-Hop,Calm
+Money Trees,good kid m.A.A.d city,Kendrick Lamar,2012-10-22,81,0.724,0.493,0.406,72.002,Hip-Hop,Calm
+Moonlight,Damn.,XXXTentacion,2017-08-25,82,0.629,0.429,0.578,144.089,Hip-Hop,Calm
+SAD!,?,XXXTentacion,2018-03-02,85,0.53,0.613,0.239,74.034,Hip-Hop,Sad
+Changes,?,XXXTentacion,2018-03-02,83,0.536,0.438,0.286,88.024,Hip-Hop,Sad
+Legends Never Die,Legends Never Die,Juice WRLD,2020-07-10,84,0.38,0.459,0.238,78.037,Hip-Hop,Sad
+Righteous,Legends Never Die,Juice WRLD,2020-07-10,80,0.611,0.529,0.591,142.042,Hip-Hop,Calm
+Robbery,Death Race for Love,Juice WRLD,2019-03-08,82,0.558,0.548,0.199,79.025,Hip-Hop,Sad
+Astronaut in the Ocean,Astronaut in the Ocean,Masked Wolf,2019-08-07,84,0.803,0.726,0.446,149.978,Hip-Hop,Energetic
+INDUSTRY BABY,CALL ME IF YOU GET LOST,Lil Nas X,2021-07-23,90,0.736,0.704,0.696,149.02,Hip-Hop,Energetic
+Montero (Call Me By Your Name),Montero,Lil Nas X,2021-03-26,88,0.698,0.782,0.679,179.977,Hip-Hop,Energetic
+A Thousand Miles,Vanessa Carlton,Vanessa Carlton,2002-01-15,79,0.454,0.337,0.432,96.018,Pop,Calm
+Titanium,Nothing But the Beat,David Guetta ft Sia,2011-08-29,83,0.613,0.783,0.394,126.01,Pop,Energetic
+Diamonds,Unapologetic,Rihanna,2012-11-19,84,0.507,0.596,0.446,123.967,Pop,Calm
+Stay With Me,In the Lonely Hour,Sam Smith,2014-05-26,84,0.442,0.373,0.213,82.066,Pop,Sad
+Writing's on the Wall,Spectre,Sam Smith,2015-09-25,79,0.343,0.296,0.162,68.018,Pop,Sad
+I'm Not the Only One,In the Lonely Hour,Sam Smith,2014-06-14,80,0.494,0.415,0.242,78.001,Pop,Sad
+Lay Me Down,In the Lonely Hour,Sam Smith,2014-05-26,77,0.396,0.318,0.235,72.02,Pop,Sad
+La La La,Loud,Naughty Boy ft Sam Smith,2013-01-01,78,0.736,0.697,0.665,98.034,Pop,Happy
+Too Good at Goodbyes,The Thrill of It All,Sam Smith,2017-09-08,83,0.389,0.374,0.176,92.033,Pop,Sad
+Dancing with a Stranger,To Die For,Sam Smith,2019-01-11,84,0.706,0.656,0.372,114.988,Pop,Calm
+Slow Motion,Slow Motion,Trey Songz,2013-07-02,75,0.746,0.588,0.585,87.002,R&B,Calm
+Redbone,Awaken My Love,Childish Gambino,2016-11-02,82,0.519,0.395,0.589,95.002,R&B,Calm
+This Is America,Donald Glover,Childish Gambino,2018-05-05,83,0.681,0.487,0.482,134.041,R&B,Energetic
+Feels Like Summer,Summer Pack,Childish Gambino,2018-08-03,80,0.645,0.543,0.769,90.012,R&B,Happy
+3005,Because the Internet,Childish Gambino,2013-12-10,79,0.641,0.582,0.468,83.992,R&B,Calm
+Fly Me to the Moon,Ballads Vol 1,Frank Sinatra,1964-01-01,79,0.572,0.246,0.934,143.915,Jazz,Happy
+What a Wonderful World,What a Wonderful World,Louis Armstrong,1967-01-01,78,0.362,0.161,0.913,71.054,Jazz,Happy
+Feeling Good,I Put a Spell on You,Nina Simone,1965-01-01,79,0.37,0.301,0.279,72.046,Jazz,Calm
+My Favorite Things,The Sound of Music,John Coltrane,1960-01-01,74,0.398,0.287,0.613,152.928,Jazz,Happy
+So What,Kind of Blue,Miles Davis,1959-08-17,77,0.544,0.248,0.736,138,Jazz,Calm
+Take Five,Time Out,Dave Brubeck,1959-07-01,78,0.553,0.258,0.679,172.006,Jazz,Calm
+Autumn Leaves,At The Pershing,Bill Evans,1959-01-01,72,0.326,0.107,0.274,166.024,Jazz,Sad
+Round Midnight,Thelonious Monk with John Coltrane,Thelonious Monk,1957-01-01,70,0.281,0.119,0.117,116.024,Jazz,Sad
+Blue in Green,Kind of Blue,Miles Davis,1959-08-17,73,0.23,0.084,0.271,63.019,Jazz,Sad
+Corcovado,Getz/Gilberto,Stan Getz,1964-03-01,74,0.403,0.133,0.711,141.952,Jazz,Calm
+Girl from Ipanema,Getz/Gilberto,Stan Getz,1964-03-01,76,0.54,0.181,0.773,130.003,Jazz,Calm
+Misty,Misty,Erroll Garner,1954-01-01,71,0.319,0.122,0.476,67.008,Jazz,Calm
+Summertime,Porgy and Bess,Ella Fitzgerald,1950-01-01,73,0.322,0.143,0.348,58.994,Jazz,Sad
+Moonlight Sonata,Piano Sonata No. 14,Ludwig van Beethoven,1801-01-01,78,0.166,0.051,0.038,57.946,Classical,Sad
+Canon in D,Pachelbel's Canon,Johann Pachelbel,1694-01-01,80,0.298,0.106,0.402,68,Classical,Calm
+Clair de Lune,Suite bergamasque,Claude Debussy,1905-01-01,79,0.226,0.047,0.301,69.027,Classical,Calm
+The Four Seasons - Spring,The Four Seasons,Antonio Vivaldi,1725-01-01,77,0.386,0.53,0.877,154.026,Classical,Happy
+Symphony No. 5,Symphony No. 5,Ludwig van Beethoven,1808-01-01,76,0.163,0.553,0.092,132.001,Classical,Energetic
+Für Elise,Für Elise,Ludwig van Beethoven,1810-01-01,78,0.308,0.106,0.419,124.981,Classical,Calm
+Gymnopédie No. 1,Gymnopédies,Erik Satie,1888-01-01,77,0.283,0.038,0.45,58.013,Classical,Calm
+Nocturne Op. 9 No. 2,Nocturnes,Frédéric Chopin,1832-01-01,76,0.238,0.049,0.373,66.497,Classical,Sad
+Ride of the Valkyries,Die Walküre,Richard Wagner,1870-01-01,74,0.258,0.784,0.387,143.983,Classical,Energetic
+Also Sprach Zarathustra,Also sprach Zarathustra,Richard Strauss,1896-01-01,73,0.12,0.533,0.172,62.006,Classical,Energetic
+Ode to Joy,Symphony No. 9,Ludwig van Beethoven,1824-01-01,77,0.338,0.385,0.818,96.001,Classical,Happy
+Requiem - Lacrimosa,Requiem,Wolfgang Amadeus Mozart,1791-01-01,74,0.196,0.213,0.064,63.992,Classical,Sad
