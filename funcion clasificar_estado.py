@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jun  4 13:49:10 2026
+
+@author: mom
+"""
+
+def clasificar_estado(puntaje):
+    if puntaje >= 8:
+        categoria = "Energetic"
+    elif puntaje >= 6:
+        categoria = "Happy"
+    elif puntaje >= 4:
+        categoria = "Calm"
+    else:
+        categoria = "Sad"
+
+    return categoria
+
+# Código principal
+puntaje = cuestionario_diario()
+categoria = clasificar_estado(puntaje)
+print(f"\nEstado de ánimo detectado: {categoria}")
