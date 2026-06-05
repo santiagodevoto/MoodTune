@@ -26,8 +26,9 @@ def cuestionario_diario():
                 print("Error: debe ingresar un número entero.")
 
     puntaje = 0
-    for respuesta, peso in zip(respuestas, pesos):
-        puntaje += respuesta * peso
+
+    for i in range(len(respuestas)):
+        puntaje += respuestas[i] * pesos[i]
 
     return puntaje
 
