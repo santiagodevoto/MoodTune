@@ -46,8 +46,3 @@ def cuestionario_diario():
         puntaje += respuestas[i] * pesos[i]
 
     return puntaje
-
-
-# Programa principal
-resultado = cuestionario_diario()
-print(f"\nPuntaje diario: {resultado:.2f}")
