@@ -9,7 +9,7 @@ El sistema trabaja exclusivamente con el estado emocional **autopercibido y repo
 ## Principales funcionalidades
 - Registro de perfil con preferencias musicales
 - Cuestionario diario de estado de ánimo (respuestas del 1 al 10)
-- Clasificación automática en 5 categorías emocionales
+- Clasificación automática en 4 categorías emocionales
 - Recomendación de canciones personalizada según categoría y géneros favoritos
 - Historial personal con fecha, puntaje y canción recomendada
 - Gráficos de evolución emocional a lo largo del tiempo
@@ -32,15 +32,14 @@ Muestra los géneros musicales disponibles y le pide al usuario que elija sus fa
 Presenta las 4 preguntas de estado de ánimo con respuestas del 1 al 10 (por ejemplo: *¿Cuánta energía tenés hoy?*, *¿Qué tan motivado te sentís?*). Valida que cada respuesta sea un entero en el rango válido y, al terminar, calcula y retorna un **puntaje ponderado** (cada pregunta tiene un peso distinto según su relevancia).
 
 ### `clasificar_estado(puntaje)`
-Recibe el puntaje ponderado y lo clasifica en una de las 5 categorías emocionales:
+Recibe el puntaje ponderado y lo clasifica en una de las 4 categorías emocionales:
 
 | Rango | Categoría |
 |---|---|
 | 8 – 10 | Energético |
-| 6 – 7.9 | Motivado |
+| 6 – 7.9 | Feliz |
 | 4 – 5.9 | Calmo |
-| 2 – 3.9 | Ansioso |
-| 1 – 1.9 | Triste |
+| 1 – 3.9 | Triste |
 
 ### `recomendar_cancion(categoria, preferencias)`
 Carga `data_moods.csv` y filtra por la categoría emocional. Si el usuario tiene géneros preferidos, los prioriza cuando hay coincidencias. Selecciona una canción al azar con `random` y retorna nombre, artista y género.
