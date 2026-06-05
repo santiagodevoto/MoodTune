@@ -16,8 +16,3 @@ def clasificar_estado(puntaje):
         categoria = "Sad"
 
     return categoria
-
-# Código principal
-puntaje = cuestionario_diario()
-categoria = clasificar_estado(puntaje)
-print(f"\nEstado de ánimo detectado: {categoria}")
