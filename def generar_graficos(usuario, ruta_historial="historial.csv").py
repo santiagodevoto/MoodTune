@@ -59,5 +59,6 @@ def generar_graficos(usuario, ruta_historial="historial.csv"):
     plt.ylabel("Cantidad de veces")
     plt.xticks(rotation=45)
 
-    plt.tight_la
+    plt.tight_layout()
+    plt.show()
 
