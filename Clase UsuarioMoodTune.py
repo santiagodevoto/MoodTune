@@ -7,6 +7,7 @@ Created on Thu Jun  4 13:36:44 2026
 
 from datetime import datetime
 import pandas as pd
+import os
 
 class UsuarioMoodTune:
     """
@@ -36,9 +37,9 @@ class UsuarioMoodTune:
             generos_preferidos (list[str]): Lista de géneros preferidos.
         """
         self.nombre = nombre
-        self.generos_preferidos = generos_preferidos   # lista, ej: ["pop", "rock"]
+        self.generos_preferidos = generos_preferidos   
         self.fecha_registro = datetime.now()
-        self.historial = []   # lista de dicts: {fecha, puntaje, categoria, cancion}
+        self.historial = []  
 
     def guardar_perfil(self, ruta="usuarios.csv"):
        """
@@ -89,21 +90,15 @@ class UsuarioMoodTune:
 
 def registrar_usuario():
     """
-   Crea el perfil del usuario la primera vez que usa el sistema.
+    Crea el perfil del usuario la primera vez que usa el sistema.
 
-   Solicita por consola el nombre y los géneros preferidos, construye un
-   objeto UsuarioMoodTune y guarda el perfil en usuarios.csv. Está pensada
-   para ejecutarse una sola vez (cuando todavía no existe el archivo de perfil).
-
-   Returns:
-       UsuarioMoodTune: El usuario recién creado, con historial vacío.
-   """
+    Returns:
+        UsuarioMoodTune: Usuario recién creado, con historial vacío.
+    """
     print("¡Bienvenido a MoodTune! Vamos a crear tu perfil.")
     nombre = input("¿Cuál es tu nombre? ").strip()
-    generos = input("¿Qué géneros musicales preferís? (separados por coma): ").strip()
-    generos_lista = [g.strip() for g in generos.split(",")]
 
-    usuario = UsuarioMoodTune(nombre, generos_lista)
+    usuario = UsuarioMoodTune(nombre, [])
     usuario.guardar_perfil()
     return usuario
 
@@ -112,35 +107,22 @@ def cargar_usuario(ruta="usuarios.csv"):
    """
     Reconstruye el perfil del usuario desde usuarios.csv.
 
-    Lee la primera (y única) fila del archivo y crea un UsuarioMoodTune con
-    el nombre y los géneros preferidos guardados. Se usa en todas las
-    sesiones posteriores a la primera. Imprime un saludo de bienvenida.
-
-    Nota: solo se restauran nombre y géneros. fecha_registro se reinicia al
-    momento actual e historial arranca vacío, ya que el CSV de perfil no
-    almacena esos datos.
-
-    Args:
-        ruta (str): Ruta del archivo de perfil. Por defecto "usuarios.csv".
-
     Returns:
         UsuarioMoodTune: El usuario cargado.
-
-    Raises:
-        FileNotFoundError: Si no existe el archivo en la ruta indicada.
     """
-   df = pd.read_csv(ruta)
-   fila = df.iloc[0]
-   usuario = UsuarioMoodTune(
+    df = pd.read_csv(ruta)
+    fila = df.iloc[0]
+    generos_raw = fila["generos_preferidos"]
+
+    # Manejar el caso en que el campo esté vacío
+    if pd.isna(generos_raw) or str(generos_raw).strip() == "":
+        generos = []
+    else:
+        generos = [g.strip() for g in str(generos_raw).split(",") if g.strip()]
+
+    usuario = UsuarioMoodTune(
         nombre=fila["nombre"],
-        generos_preferidos=fila["generos_preferidos"].split(",")
+        generos_preferidos=generos
     )
-   print(f"Bienvenido de vuelta, {usuario.nombre}.")
-   return usuario
-
-import os
-
-if os.path.exists("usuarios.csv"):
-    usuario = cargar_usuario()       # sesiones 2, 3, 4...
-else:
-    usuario = registrar_usuario()    # solo la primera vez
+    print(f"Bienvenido de vuelta, {usuario.nombre}.")
+    return usuario
