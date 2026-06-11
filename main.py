@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 11 13:50:23 2026
-
-@author: mom
-"""
-
 import os
 import pandas as pd
 from datetime import datetime
