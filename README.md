@@ -62,3 +62,7 @@ Al usar el sistema, el usuario obtiene:
 
 ## Declaracion de IA
 Durante el desarrollo de este proyecto se utilizaron herramientas de inteligencia artificial (como ChatGPT o Claude) como una herramienta de asistencia y no reemplazó el proceso de aprendizaje ni la autoría del trabajo.
+Principalmente, nos apoyamos en Claude para realizar los diagramas de flujo. Luego de una revision grupal, reenviavamos el diagrama a una nueva comversacion con la IA para que basandose unicamente en ese diagrama proceda a codear. Los codigos fueron siempre revisados dado que sin instrucciones claras, Claude introducia conceptos o formas de codear que no nos eran familiares. Por eso, varias veces le pedimos que simplifique basandose unicamente en lo visto durante la cursada. De esta manera, pudimos ir comprendiendo las lineas del codigo y aprendiendo cosas nuevas. 
+El trabajo mas arduo que le solicitamos fue el desarrollo del codigo principal. Le enviamos todos lo codigos y diagramas, solicitandole que detecte errores, verifique los codigos sigan un mismo hilo conductor y que tambien se tome su tiempo. El prompt que utilizamos para el desarrollo fue el siguiente: "Hola claude te voy a subir todos los archivos del programa que estoy creando y necesito que revises que todo funcione de manera coherente, bien y todo funcione en conjunto. En base a todo el programa crea el main (te adjunte el diagrama de flujo del main)."
+
+
