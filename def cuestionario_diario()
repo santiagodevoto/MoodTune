@@ -40,9 +40,5 @@ def cuestionario_diario():
             except ValueError:
                 print("Error: debe ingresar un número entero.")
 
-    puntaje = 0
-
-    for i in range(len(respuestas)):
-        puntaje += respuestas[i] * pesos[i]
-
+    puntaje = sum(respuestas[i] * pesos[i] for i in range(len(respuestas)))
     return puntaje
