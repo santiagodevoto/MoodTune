@@ -2,11 +2,11 @@ import os
 import pandas as pd
 from datetime import datetime
 
-from Clase_UsuarioMoodTune import registrar_usuario, cargar_usuario
-from cuestionario_diario import cuestionario_diario
-from clasificar_estado import clasificar_estado
-from recomendar_cancion import recomendar_cancion, generos_disponibles
-from generar_graficos import generar_graficos
+from clase import registrar_usuario, cargar_usuario
+from cuestionario import cuestionario_diario
+from clasificacion import clasificar_estado
+from recomendacion import recomendar_cancion, generos_disponibles
+from graficos import generar_graficos
 
 
 def preguntar_preferencias(usuario):

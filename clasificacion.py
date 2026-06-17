@@ -1,5 +1,5 @@
 def clasificar_estado(puntaje):
- """
+    """
     Clasifica el estado de ánimo del usuario según su puntaje emocional.
 
     Toma el puntaje ponderado del cuestionario diario y lo ubica en una de

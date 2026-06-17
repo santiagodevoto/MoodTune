@@ -35,7 +35,7 @@ class UsuarioMoodTune:
         self.historial = []  
 
     def guardar_perfil(self, ruta="usuarios.csv"):
-       """
+        """
         Guarda el perfil del usuario en un archivo CSV.
 
         Escribe nombre, géneros preferidos (unidos por comas) y fecha de
@@ -49,13 +49,13 @@ class UsuarioMoodTune:
         Returns:
             None
         """
-       datos = {
+        datos = {
             "nombre": [self.nombre],
             "generos_preferidos": [",".join(self.generos_preferidos)],
             "fecha_registro": [self.fecha_registro]
         }
-       pd.DataFrame(datos).to_csv(ruta, index=False)
-       print(f"Perfil de {self.nombre} guardado correctamente.")
+        pd.DataFrame(datos).to_csv(ruta, index=False)
+        print(f"Perfil de {self.nombre} guardado correctamente.")
 
     def agregar_registro(self, puntaje, categoria, cancion):
         """
@@ -97,7 +97,7 @@ def registrar_usuario():
 
 
 def cargar_usuario(ruta="usuarios.csv"):
-   """
+    """
     Reconstruye el perfil del usuario desde usuarios.csv.
 
     Returns:
