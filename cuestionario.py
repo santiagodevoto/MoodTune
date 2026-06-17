@@ -1,0 +1,45 @@
+def cuestionario_diario():
+    '''
+    Le formula al usuario 4 preguntas sobre su bienestar del día (estado de ánimo,
+    motivación, descanso y productividad), cada una puntuada del 1 al 10.
+    Las respuestas se ponderan según su importancia y se combinan
+    en un puntaje final que refleja el mood general del día.
+
+    Returns:
+        float: Puntaje ponderado entre 1.0 y 10.0 que representa
+               el estado de ánimo general del usuario en el día.
+
+    Raises:
+        ValueError: Si el usuario ingresa un valor no numérico, se solicita reingresar.
+
+    '''
+
+
+    preguntas = [
+        "¿Cómo estuvo tu estado de ánimo hoy?",
+        "¿Qué tan motivado te sentiste hoy?",
+        "¿Qué tan bien descansaste anoche?",
+        "¿Qué tan productivo fue tu día?"
+    ]
+
+    # Pesos de cada pregunta
+    pesos = [0.4, 0.3, 0.2, 0.1]
+
+    respuestas = []
+
+    for pregunta in preguntas:
+        while True:
+            try:
+                respuesta = int(input(f"{pregunta} (1-10): "))
+
+                if 1 <= respuesta <= 10:
+                    respuestas.append(respuesta)
+                    break
+                else:
+                    print("Error: ingrese un número entre 1 y 10.")
+
+            except ValueError:
+                print("Error: debe ingresar un número entero.")
+
+    puntaje = sum(respuestas[i] * pesos[i] for i in range(len(respuestas)))
+    return puntaje

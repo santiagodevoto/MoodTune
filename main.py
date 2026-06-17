@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from datetime import datetime
 
-from Clase_UsuarioMoodTune import UsuarioMoodTune, registrar_usuario, cargar_usuario
+from Clase_UsuarioMoodTune import registrar_usuario, cargar_usuario
 from cuestionario_diario import cuestionario_diario
 from clasificar_estado import clasificar_estado
 from recomendar_cancion import recomendar_cancion, generos_disponibles
