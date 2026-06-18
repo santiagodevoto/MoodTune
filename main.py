@@ -97,6 +97,36 @@ def guardar_registro(usuario, puntaje, categoria, cancion):
     print("Registro del " + fecha + " guardado correctamente.")
 
 
+def ver_historial(usuario, ruta_historial="historial.csv"):
+    """
+    Muestra por consola el historial completo de registros del usuario.
+
+    Si todavía no existe historial.csv o está vacío, avisa al usuario en
+    lugar de mostrar una tabla vacía.
+
+    Args:
+        usuario        (UsuarioMoodTune): Usuario activo (se usa su nombre).
+        ruta_historial (str): Ruta al CSV de historial. Por defecto "historial.csv".
+
+    Returns:
+        None
+    """
+    if not os.path.exists(ruta_historial):
+        print("\nAún no tenés registros guardados.")
+        print("Completá al menos un día antes de revisar tu historial.")
+        return
+
+    df = pd.read_csv(ruta_historial)
+
+    if df.empty:
+        print("\nEl historial está vacío.")
+        print("Completá al menos un día antes de revisar tu historial.")
+        return
+
+    print("\n-- Historial de " + usuario.nombre + " --")
+    print(df.to_string(index=False))
+
+
 def main():
     print("Bienvenido a MoodTune!")
 
@@ -111,15 +141,16 @@ def main():
 
     opcion = ""
 
-    while opcion != "3":
+    while opcion != "4":
         print("\n" + "-" * 40)
         print("Hola, " + usuario.nombre + "!")
         print("1. Registrar ánimo del día")
         print("2. Ver gráficos de evolución")
-        print("3. Salir")
+        print("3. Revisar historial")
+        print("4. Salir")
         print("-" * 40)
 
-        opcion = input("Elegí una opción (1-3): ")
+        opcion = input("Elegí una opción (1-4): ")
 
         if opcion == "1":
             print("\n-- Cuestionario diario --")
@@ -142,10 +173,13 @@ def main():
             generar_graficos(usuario, "historial.csv")
 
         elif opcion == "3":
+            ver_historial(usuario, "historial.csv")
+
+        elif opcion == "4":
             print("\n¡Hasta pronto, " + usuario.nombre + "!")
 
         else:
-            print("Opción inválida. Ingresá 1, 2 o 3.")
+            print("Opción inválida. Ingresá 1, 2, 3 o 4.")
 
 
 main()
