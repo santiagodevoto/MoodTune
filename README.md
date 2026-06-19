@@ -68,6 +68,118 @@ Lee el historial del usuario. Si no hay registros, avisa y termina. Si hay datos
 - Distribución de categorías emocionales
 - Géneros musicales más recomendados
 
+## Recorrido del código en orden de ejecución
+3.1 Arranque del programa
+main()
+Archivo: main.py
+Es el punto de entrada: la única línea que se ejecuta al correr el programa es la llamada main() al final del archivo. Orquesta todo el resto del sistema.
+Cómo funciona:
+Imprime el saludo de bienvenida.
+Revisa con os.path.exists("usuarios.csv") si ya existe un perfil guardado: si existe, llama a cargar_usuario(); si no, llama a registrar_usuario().
+Si el usuario todavía no tiene géneros preferidos configurados, llama a preguntar_preferencias().
+Entra en un bucle while que muestra el menú de 4 opciones hasta que el usuario elige "4. Salir".
+Retorna: nada (None). Es la función orquestadora; no devuelve datos, solo controla el flujo del programa.
+
+3.2 Gestión del perfil del usuario
+Archivo: clase.py
+class UsuarioMoodTune
+Representa al único usuario del sistema. Guarda en memoria cuatro datos: nombre, generos_preferidos (lista), fecha_registro y historial (lista de registros diarios, distinta del CSV).
+registrar_usuario()
+Se ejecuta solo la primera vez que se usa el programa, cuando usuarios.csv todavía no existe.
+Cómo funciona:
+Pide el nombre por consola con input().
+Crea un objeto UsuarioMoodTune con ese nombre y una lista de géneros vacía.
+Llama a guardar_perfil() para persistirlo en usuarios.csv.
+Retorna: el objeto UsuarioMoodTune recién creado.
+cargar_usuario(ruta="usuarios.csv")
+Se ejecuta en todas las sesiones siguientes a la primera, cuando ya existe un perfil guardado.
+Cómo funciona:
+Lee usuarios.csv con pandas y toma la primera (y única) fila.
+Revisa si el campo de géneros está vacío o es NaN. Si lo está, arma una lista vacía; si no, separa el texto por comas y limpia espacios.
+Reconstruye el objeto UsuarioMoodTune con esos datos.
+Retorna: el objeto UsuarioMoodTune reconstruido desde el CSV.
+guardar_perfil(self, ruta="usuarios.csv")  — método de la clase
+Persiste el perfil actual en disco. Se llama tanto desde registrar_usuario() como desde preguntar_preferencias() cada vez que cambian los géneros.
+Cómo funciona: arma un diccionario con nombre, géneros (unidos por comas) y fecha de registro, y lo escribe con to_csv(), sobrescribiendo el archivo completo (porque el sistema maneja un solo usuario).
+Retorna: nada (None). Imprime una confirmación por consola.
+agregar_registro(self, puntaje, categoria, cancion)  — método de la clase
+Guarda el registro del día en memoria, dentro del objeto usuario. No escribe en disco: eso lo hace guardar_registro() en main.py, que es una función distinta con un nombre parecido.
+Cómo funciona: arma un diccionario con la fecha actual y los datos recibidos, y lo agrega a self.historial con .append().
+Retorna: nada (None).
+
+3.3 Configuración de preferencias musicales
+Archivo: main.py
+preguntar_preferencias(usuario)
+Se llama una sola vez, justo después de crear o cargar al usuario, solo si todavía no tiene géneros configurados.
+Cómo funciona:
+Muestra la lista numerada de generos_disponibles (importada de recomendacion.py).
+Pide al usuario que ingrese los números de sus géneros favoritos separados por coma.
+Valida cada número (que sea un dígito y esté dentro del rango disponible). Si algo falla, avisa el error y vuelve a pedir todo de nuevo, en un bucle hasta que la entrada sea completamente válida.
+Guarda la lista de géneros en usuario.generos_preferidos y llama a usuario.guardar_perfil() para persistirla.
+Retorna: list[str] con los géneros elegidos.
+3.4 El menú principal y sus 4 opciones
+A partir de acá el programa entra en un bucle que se repite hasta que el usuario elige "4. Salir". Cada opción dispara una secuencia distinta de funciones.
+
+Opción 1 — Registrar ánimo del día
+Es la secuencia más larga: encadena 4 funciones de 4 archivos distintos.
+cuestionario_diario()
+Archivo: cuestionario.py
+Cómo funciona:
+Define 4 preguntas (ánimo, motivación, descanso, productividad) y sus pesos (0.4, 0.3, 0.2, 0.1).
+Para cada pregunta, pide una respuesta entre 1 y 10. Si el usuario ingresa algo no numérico o fuera de rango, imprime un error y vuelve a pedir esa misma pregunta (no se propaga ninguna excepción hacia afuera).
+Una vez que tiene las 4 respuestas válidas, calcula el puntaje ponderado: suma de respuesta[i] por peso[i].
+Retorna: float — el puntaje final del día, entre 1.0 y 10.0.
+clasificar_estado(puntaje)
+Archivo: clasificacion.py
+Cómo funciona: compara el puntaje en cascada contra 3 umbrales (8, 6 y 4) con if/elif/else, y asigna la primera categoría que cumple.
+| Rango | Categoría |
+|---|---|
+| 8 – 10 | Energético |
+| 6 – 7.9 | Feliz |
+| 4 – 5.9 | Calmo |
+| 1 – 3.9 | Triste |
+Retorna: str — una de las 4 categorías.
+recomendar_cancion(categoria, preferencias, ruta="data_moods.csv")
+Archivo: recomendacion.py
+Cómo funciona:
+Lee data_moods.csv con pandas.
+Traduce la categoría al inglés con el diccionario categoria_a_mood (el CSV usa "Energetic", "Happy", "Calm", "Sad") y filtra las canciones de ese mood.
+Si no hay ninguna canción para esa categoría, avisa por consola y corta ahí.
+Si el usuario tiene géneros preferidos, intenta filtrar además por esos géneros. Si hay coincidencias usa ese subconjunto más chico; si no hay ninguna coincidencia, usa todas las canciones de la categoría.
+Elige una canción al azar del subconjunto final con pandas.DataFrame.sample().
+Retorna: dict con claves "nombre", "artista" y "genero" si encontró una canción, o None si no había ninguna canción para esa categoría.
+guardar_registro(usuario, puntaje, categoria, cancion)
+Archivo: main.py
+Solo se ejecuta si recomendar_cancion() no devolvió None.
+Cómo funciona:
+Genera la fecha actual con datetime.now().
+Arma una fila con fecha, puntaje, categoría y los datos de la canción.
+Si historial.csv no existe, lo crea con encabezados; si ya existe, agrega la fila al final sin repetir encabezados.
+Llama a usuario.agregar_registro() para que el registro quede también en memoria, en el objeto usuario.
+Retorna: nada (None). Imprime una confirmación por consola.
+
+Opción 2 — Ver gráficos de evolución
+generar_graficos(usuario, ruta_historial="historial.csv")
+Archivo: graficos.py
+Cómo funciona:
+Si historial.csv no existe, avisa y corta ahí.
+Si existe pero está vacío, avisa y corta ahí también.
+Si hay datos, genera tres gráficos con matplotlib: una línea con la evolución del puntaje por fecha, una torta con la distribución de categorías emocionales, y barras con la cantidad de veces que se recomendó cada género.
+Muestra los tres con plt.show().
+Retorna: nada (None).
+
+Opción 3 — Revisar historial
+ver_historial(usuario, ruta_historial="historial.csv")
+Archivo: main.py
+Cómo funciona:
+Si historial.csv no existe, avisa y corta ahí.
+Si existe pero está vacío, avisa y corta ahí también.
+Si hay datos, imprime la tabla completa por consola con df.to_string(index=False).
+Retorna: nada (None). Es la versión "texto plano" de los gráficos: sirve para consultar rápido los registros sin abrir una ventana de matplotlib.
+
+Opción 4 — Salir
+No llama a ninguna función adicional. Solo imprime un mensaje de despedida y, como opcion pasa a valer "4", la condición del while se vuelve falsa y el bucle (y el programa) terminan.
+
 ## Resultados y salidas del programa
 Al usar el sistema, el usuario obtiene:
 
