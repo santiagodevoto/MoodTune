@@ -131,13 +131,8 @@ Una vez que tiene las 4 respuestas válidas, calcula el puntaje ponderado: suma 
 Retorna: float — el puntaje final del día, entre 1.0 y 10.0.
 clasificar_estado(puntaje)
 Archivo: clasificacion.py
-Cómo funciona: compara el puntaje en cascada contra 3 umbrales (8, 6 y 4) con if/elif/else, y asigna la primera categoría que cumple.
-| Rango | Categoría |
-|---|---|
-| 8 – 10 | Energético |
-| 6 – 7.9 | Feliz |
-| 4 – 5.9 | Calmo |
-| 1 – 3.9 | Triste |
+Cómo funciona: compara el puntaje en cascada contra 3 umbrales (8, 6 y 4) con if/elif/else, y asigna la primera categoría que cumple (1-3.9: Triste, 4-5.9: Calmo, 6-7.9: Feliz, 8-10: Energetico.
+
 Retorna: str — una de las 4 categorías.
 recomendar_cancion(categoria, preferencias, ruta="data_moods.csv")
 Archivo: recomendacion.py
