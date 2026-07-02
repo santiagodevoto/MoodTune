@@ -189,4 +189,62 @@ Principalmente, nos apoyamos en Claude para realizar los diagramas de flujo. Lue
 
 El trabajo mas arduo que le solicitamos fue el desarrollo del codigo principal. Le enviamos todos lo codigos y diagramas, solicitandole que detecte errores, verifique los codigos sigan un mismo hilo conductor y que tambien se tome su tiempo. El prompt que utilizamos para el desarrollo fue el siguiente: "Hola claude te voy a subir todos los archivos del programa que estoy creando y necesito que revises que todo funcione de manera coherente, bien y todo funcione en conjunto. En base a todo el programa crea el main (te adjunte el diagrama de flujo del main)."
 
+Prompts de funciones: 
+Lo que hicimos fue pensar y diseñar nosotros la lógica del programa. Primero armamos los diagramas de flujo y los docstrings de cada función para tener bien definido qué tenía que hacer cada parte del proyecto. Después, con prompts como los que aparecen abajo, se los pasábamos a una IA (principalmente Claude) para que nos ayudara a escribir el código en Python siguiendo ese diseño.
+
+Una vez generado el código, lo revisábamos entre nosotros para comprobar que hiciera lo que necesitábamos, que fuera entendible y que estuviera de acuerdo con el funcionamiento que habíamos pensado. Cuando había algo que no nos convencía o no funcionaba como esperábamos, lo modificábamos o le pedíamos a la IA que hiciera cambios hasta obtener el resultado que buscábamos.
+
+Además, la IA también nos ayudó en la parte final del proyecto, sobre todo para integrar todas las funciones en el main.py, evitando errores al conectar los distintos módulos y logrando que el programa funcionara de manera correcta.
+
+Prompts utilizados
+
+cuestionario_diario.py
+
+Ya hice el diagrama de flujo (te lo adjunto) y el docstring de la función cuestionario_diario(). Me ayudas a implementarla en Python respetando ese diseño. La función tiene que hacer las preguntas del cuestionario, validar que las respuestas sean números entre 1 y 10, calcular el puntaje final usando los pesos que definimos y contemplar los posibles errores.
+
+graficos.py
+
+Ya tengo el diagrama de flujo de generar_graficos(). Necesito que escrias la función en Python usando pandas y matplotlib tiene que leer el historial del usuario, generar los gráficos que definimos y manejar los casos en los que los datos estén vacíos.
+
+recomendacion.py
+
+Ya definimos la lógica de recomendar_cancion() abajo te dejo el diagrama de flujo. Me ayudás a crear la función tiene que leer el archivo CSV de canciones, filtrar según el estado de ánimo y, si es posible, priorizar los géneros preferidos del usuario.
+
+clasificacion.py
+
+Abajo te dejo el docstring y el diagrama de flujo de clasificar_estado(). Podes generar el codigo respetando los disenos de la funcion usando if, elif y else, respetando los rangos que ya definimos
+
+Clase.py diseñé la clase UsuarioMoodTune y sus métodos. Tengo que hacer el codigo usando datetime y pandas, respetando la estructura que ya definimos. Te dejo abajo el diagrama de flujo y un documento con los docstrings y las funciones pensadas.
+
+main.py
+
+Ya tenemos todas las funciones hechas por separado. Y necesito unir todo para armar el main.py y hacer el menú del programa. Te adjunto el diagrama de flujo y un documento con la idea general de cómo tiene que funcionar.
+
+
+
+Division de tareas:
+Mia Blaquier: 
+Creación de todo el Readme 
+Corrección de errores de todo el programa 
+Uso de Pandas en el programa
+Creación del programa principal
+
+Alfonso Buján: 
+Diagramas de flujo de:  cuestionario_diario, clasificar_estado, recomendar_cancion, generar_graficos y main.py 
+Doctrings de: registrar_usuario, clasificar_estado, recomendar_cancion, guardar_registro
+
+Santiago Devoto:
+Creación de la función cuestionario_diario y su docstring 
+Creación de la función registrar_usuario
+
+Wenceslao Grosse: 
+Creación de la función generar_gráficos y su docstring
+Creación de la función guardar_registro
+Diagrama de flujo de: generar_graficos y guardar registro
+
+Ramón Otero Monsegur: 
+Creación de las carpetas
+Importar Data_moods.csv cargando la lista de canciones, su género y su estado de ánimo con el que se lo clasifica
+Creación de la función clasificar_estado 
+Creación de la función recomendar_cancion
 
